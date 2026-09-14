@@ -14,7 +14,7 @@ proxies:
   reality-opts:
     public-key: oHaUPZiESTQQ89DMd4uIcPWgsyeFFy58iZYX_8mbvWk
   servername: dl.dell.com
-  client-fingerprint: ios
+  client-fingerprint: edge
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
