@@ -1,0 +1,35 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇦 沙特 (Saudi Arabia) 01 - xiaohe
+  server: 91.209.253.68
+  port: 443
+  udp: true
+  type: vless
+  uuid: b09dfed1-90fa-4353-8bdf-de1edb2e2d79
+  tls: true
+  servername: nb.lovecf.ggff.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /proxyip=us.xiabibi.cf
+    headers:
+      Host: nb.lovecf.ggff.net
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇦 沙特 (Saudi Arabia) 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇦 沙特 (Saudi Arabia) 01 - xiaohe
+rules:
+- MATCH,PROXIES
